@@ -1,0 +1,6 @@
+{
+  "name": "Mahendra Hospitals Portfolio",
+  "description": "Professional, modern portfolio website for Mahendra Hospitals in Vizianagaram, Andhra Pradesh, featuring specialised gastroenterology, gynaecology, surgery, and multi-speciality departments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
