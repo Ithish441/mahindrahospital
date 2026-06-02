@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+Telugu:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-telugu: "Noto Sans Telugu", "Inter", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-med-blue: #2D4A47;
+  --color-med-teal: #3E6B65;
+  --color-med-amber: #C8A97A;
+  --color-off-white: #F7F3ED;
+  --color-charcoal: #3D2B1A;
+  --color-card-bg: #FFFFFF;
+}
+
+/* Custom scrollbar and brutalist transitions */
+html {
+  scroll-behavior: smooth;
+  background-color: #F7F3ED;
+}
+
+body {
+  color: #3D2B1A;
+  background-color: #F7F3ED;
+}
+
+::selection {
+  background-color: #C8A97A;
+  color: #3D2B1A;
+}
+
+/* Brutalist Block Shadows and Borders */
+.brutalist-border {
+  border: 3px solid #2D4A47;
+}
+
+.brutalist-shadow-sm {
+  box-shadow: 3px 3px 0px 0px #2D4A47;
+}
+
+.brutalist-shadow {
+  box-shadow: 6px 6px 0px 0px #2D4A47;
+}
+
+.brutalist-shadow-lg {
+  box-shadow: 10px 10px 0px 0px #2D4A47;
+}
+
+.brutalist-shadow-amber {
+  box-shadow: 6px 6px 0px 0px #C8A97A;
+}
+
+.brutalist-shadow-teal {
+  box-shadow: 6px 6px 0px 0px #7DA8A0;
+}
+
+.brutalist-card {
+  background-color: #FFFFFF;
+  border: 3px solid #2D4A47;
+  box-shadow: 6px 6px 0px 0px #2D4A47;
+  border-radius: 0px !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.brutalist-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px 0px #2D4A47;
+}
+
+.brutalist-btn-primary {
+  background-color: #C8A97A;
+  color: #3D2B1A;
+  border: 3px solid #2D4A47;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 4px 4px 0px 0px #2D4A47;
+  border-radius: 0px !important;
+  transition: all 0.1s ease;
+}
+
+.brutalist-btn-primary:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #2D4A47;
+}
+
+.brutalist-btn-primary:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px 0px #2D4A47;
+}
+
+.brutalist-btn-secondary {
+  background-color: #FFFFFF;
+  color: #2D4A47;
+  border: 3px solid #2D4A47;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 4px 4px 0px 0px #2D4A47;
+  border-radius: 0px !important;
+  transition: all 0.1s ease;
+}
+
+.brutalist-btn-secondary:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #2D4A47;
+}
+
+/* Scroll animation placeholders if they don't load instantly */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.5; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.5; }
+}
+
+.pulse-badge {
+  animation: pulse-ring 2.5s infinite ease-in-out;
+}
+
