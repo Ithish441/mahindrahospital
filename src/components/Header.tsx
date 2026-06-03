@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { CLINICAL_PHONE } from "../data";
 import { useLanguage } from "../LanguageContext";
-import logo from "../../logo.svg";
+import logo from "../assets/logo.svg";
 
 export default function Header() {
   const { language, setLanguage, t } = useLanguage();
